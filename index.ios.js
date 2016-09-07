@@ -26,6 +26,9 @@ class PasYisroel extends Component {
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
+        <Text style={styles.instructions}>
+          Testing git remote in Webstorm
+        </Text>
       </View>
     );
   }
