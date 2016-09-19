@@ -4,9 +4,9 @@ import React, {PropTypes} from 'react'
 import {NavigationExperimental, StyleSheet} from 'react-native'
 import { connect } from 'react-redux'
 
-import First from './First'
-import Second from './Second'
-import Third from './Third'
+import First from './Home'
+import Second from './CustomerInfo'
+import Third from './ChooseProducts'
 import Modal from './Modal'
 import { navigatePop } from '../actions/actionNavigation'
 
@@ -55,12 +55,12 @@ class AppContainerWithCardStack extends React.Component {
 		const { route } = scene;
 		
 		switch(route.key) {
-		case 'First':
-			return <First />;
-		case 'Second':
-			return <Second />;
-		case 'Third':
-			return <Third />;
+		case 'Home':
+			return <Home />;
+		case 'Customer Info':
+			return <CustomerInfo />;
+		case 'Choose Products':
+			return <ChooseProducts />;
 		case 'Modal':
 			return <Modal />
 		}

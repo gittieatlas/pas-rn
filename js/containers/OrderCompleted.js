@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
-import ThirdScreen from '../components/ThirdScreen'
+import OrderCompletedScreen from '../components/OrderCompletedScreen'
 import { navigateReset } from '../actions/actionNavigation'
-
+import * as constants from '../utils/constants'
 
 const mapStateToProps = (state) => {
 	return {
@@ -11,7 +11,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		onButtonPress: () => {
-			dispatch(navigateReset([{ key: 'First', title: 'First' }], 0))
+			dispatch(navigateReset([{ key: constants.SCREEN_HOME, title: constants.SCREEN_HOME }], 0))
 		}
 	}
 };
@@ -19,4 +19,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(ThirdScreen)
+)(OrderCompletedScreen)

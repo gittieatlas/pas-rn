@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
-
-import FirstScreen from '../components/FirstScreen'
+import HomeScreen from '../components/HomeScreen'
 import { navigatePush } from '../actions/actionNavigation'
+import * as constants from '../utils/constants'
 
 
 const mapStateToProps = (state) => {
@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		onButtonPress: () => {
-			dispatch(navigatePush('Second'))
+			dispatch(navigatePush(constants.SCREEN_CUSTOMER_INFO))
 		}
 	}
 };
@@ -20,4 +20,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(FirstScreen)
+)(HomeScreen)

@@ -5,7 +5,7 @@ import * as NavigationStateUtils from 'NavigationStateUtils';
 const initialNavState = {
 	index: 0,
 	routes: [
-		{ key: 'First', title: 'First' }
+		{ key: 'Home', title: 'Home' }
 	]
 };
 

@@ -1,6 +1,7 @@
 import {connect} from 'react-redux'
-import SecondScreen from '../components/SecondScreen'
+import CustomerInfoScreen from '../components/CustomerInfoScreen'
 import {navigatePush} from '../actions/actionNavigation'
+import * as constants from '../utils/constants'
 
 
 const mapStateToProps = (state) => {
@@ -10,10 +11,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onButtonPress: () => {
-            dispatch(navigatePush('Third'))
+            dispatch(navigatePush(constants.SCREEN_CHOOSE_PRODUCTS))
         },
         onModalButtonPress: () => {
-            dispatch(navigatePush('Modal'))
+            dispatch(navigatePush(constants.SCREEN_MODAL))
         }
     }
 };
@@ -21,4 +22,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(SecondScreen)
+)(CustomerInfoScreen)
